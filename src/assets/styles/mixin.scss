@@ -1,0 +1,25 @@
+@import './variables';
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: $breakpoint-phone) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: $breakpoint-tablet-portrait) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: $breakpoint-tablet-landscape) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: $breakpoint-big-desktop) {
+      @content;
+    }
+  }
+}

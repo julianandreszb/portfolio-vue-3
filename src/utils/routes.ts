@@ -5,7 +5,6 @@ const routes: Array<IRoute> = [
   { id: 'nav-item-skills', label: 'Skills', path: '/skills' },
   { id: 'nav-item-portfolio', label: 'Portfolio', path: '/portfolio' },
   { id: 'nav-item-career', label: 'Career', path: '/career' },
-  { id: 'nav-item-contact', label: 'Contact', path: '/contact' },
   { id: 'nav-item-contact', label: 'Contact', path: '/contact' }
 ]
 

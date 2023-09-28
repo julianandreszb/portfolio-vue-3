@@ -66,3 +66,6 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
+### Interesting Guides
+- https://medium.com/itnext/structuring-your-sass-projects-c8d41fa55ed4
+- https://medium.com/javascript-in-plain-english/modern-css-layouts-headers-a02577e3181d
