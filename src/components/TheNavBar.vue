@@ -47,10 +47,11 @@ const toggleMainMenu = function () {
 @import '../assets/styles/mixin';
 
 .navbar {
+  background-color: var(--color-background);
   display: flex;
   justify-content: end;
   padding-block: 2.4rem;
-  padding-inline: 3.6rem;
+  padding-inline: 2.4rem;
   min-height: 6rem;
   box-shadow: 0 8px 8px -8px rgba(1, 1, 1, 0.5);
 
@@ -146,10 +147,28 @@ const toggleMainMenu = function () {
     }*/
   }
 
-  @include for-size(phone-only) {
-  }
-
   @include for-size(tablet-portrait-up) {
+    .hamburger-menu {
+      display: none;
+    }
+
+    .main-menu {
+      display: flex;
+      gap: 3.6rem;
+      text-align: center;
+
+      .main-menu-item {
+        padding-block: 0;
+        padding-inline: 0;
+        min-width: 7rem;
+
+        a {
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 }
 </style>
