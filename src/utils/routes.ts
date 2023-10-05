@@ -1,4 +1,4 @@
-import type { IRoute } from '@/utils/tsinterfaces/IRoute'
+import type { IRoute } from '@/utils/typeScriptDefinitions/IRoute'
 
 const routes: Array<IRoute> = [
   { id: 'nav-item-about', label: 'About Me', path: '/about' },

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IRoute } from '@/utils/tsinterfaces/IRoute'
+import type { IRoute } from '@/utils/typeScriptDefinitions/IRoute'
 import { ref } from 'vue'
 
 interface Props {
@@ -44,7 +44,7 @@ const toggleMainMenu = function () {
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/styles/mixin';
+@import '../assets/sass/abstracts/mixin';
 
 .navbar {
   background-color: var(--color-background);
@@ -102,6 +102,7 @@ const toggleMainMenu = function () {
         white-space: nowrap;
         text-decoration: none;
         user-select: none;
+        color: var(--color-text-black);
 
         &:visited {
           color: var(--color-text);
