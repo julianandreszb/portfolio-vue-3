@@ -25,13 +25,13 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   <section :id="props.sectionId" class="v-section">
     <span
       class="opening-tag"
-      v-if="props.headerTag?.tagContent"
+      v-if="props.headerTag?.tagName && props.headerTag?.tagContent"
       v-html="getHeaderTag(props.headerTag.tagName, props.headerTag.tagContent)"
     ></span>
     <slot></slot>
     <span
       class="closing-tag"
-      v-if="props.headerTag?.tagContent"
+      v-if="props.headerTag?.tagName && props.headerTag?.tagContent"
       v-html="getHeaderTag(props.headerTag.tagName, props.headerTag.tagContent, true)"
     ></span>
   </section>
@@ -39,7 +39,6 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
 
 <style lang="scss" scoped>
 @mixin heading-tag {
-  color: var(--color-text-black);
   font-size: 3.6rem;
   font-style: normal;
   font-weight: 600;
