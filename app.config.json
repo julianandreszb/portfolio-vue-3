@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "summary": {
+      "greeting": {
+        "text": "Hi, I’m",
+        "name": "Julian"
+      },
+      "occupation": {
+        "text": "Full-stack Web Developer"
+      },
+      "photo": {
+        "src": "/profile-picture.png"
+      },
+      "description" : {
+        "text": "I'm a full-stack web developer making great stuff happen since 2013. Currently building awesome code and apps at Life-File"
+      }
+    },
+    "aboutMe": {
+      "description": {
+        "text":"I’ve been coding for more than 10 years. I’ve created everything from regular websites, to complex webs and mobile applications. I have an extensive experience in back-end using Node.js and PHP.  I’m growing as front-end developer using Vue.js 2 and 3"
+      }
+    }
+  }
+}

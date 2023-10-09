@@ -25,7 +25,7 @@ describe('VSection', () => {
     const wrapper = mount(VSection, {
       props: {
         sectionId: 'custom-id',
-        headerTag: { tagName: '', tagContent: '' }
+        headerTag: { tagName: EnumHeaders.h1, tagContent: '' }
       }
     })
     expect(wrapper.find(`.opening-tag`).exists()).toBe(false)

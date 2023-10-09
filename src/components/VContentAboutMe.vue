@@ -1,15 +1,10 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
-
-const ABOUT_ME_DESCRIPTION = import.meta.env.VITE_SECTION_ABOUT_ME_DESCRIPTION
-
-const aboutMe = reactive({
-  description: ABOUT_ME_DESCRIPTION
-})
+import appConfig from '../../app.config.json'
+const { aboutMe } = appConfig.sections
 </script>
 
 <template>
-  <p>{{ aboutMe.description }}</p>
+  <p>{{ aboutMe.description.text }}</p>
 </template>
 
 <style scoped></style>

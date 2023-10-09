@@ -19,6 +19,7 @@ import VContentAboutMe from '@/components/VContentAboutMe.vue'
     >
       <v-content-about-me></v-content-about-me>
     </v-section>
+    <v-section section-id="skills"> </v-section>
   </main>
 </template>
 

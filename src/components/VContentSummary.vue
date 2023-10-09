@@ -1,20 +1,6 @@
 <script setup lang="ts">
-// import { reactive } from 'vue'
-
-// const SUMMARY_PHOTO_URL_X1 = import.meta.env.VITE_SECTION_SUMMARY_PHOTO_URL_SIZE_X1
-// const SUMMARY_PHOTO_URL_X2 = import.meta.env.VITE_SECTION_SUMMARY_PHOTO_URL_SIZE_X2
-// const SUMMARY_PHOTO_URL_X3 = import.meta.env.VITE_SECTION_SUMMARY_PHOTO_URL_SIZE_X3
-const SUMMARY_GREETING = import.meta.env.VITE_SECTION_SUMMARY_GREETING
-const SUMMARY_GREETING_NAME = import.meta.env.VITE_SECTION_SUMMARY_GREETING_NAME
-const SUMMARY_OCCUPATION = import.meta.env.VITE_SECTION_SUMMARY_OCCUPATION
-const SUMMARY_DESCRIPTION = import.meta.env.VITE_SECTION_SUMMARY_DESCRIPTION
-
-/*const summary = reactive({
-  greeting: SUMMARY_GREETING,
-  greeting_name: SUMMARY_GREETING_NAME,
-  occupation: SUMMARY_OCCUPATION,
-  description: SUMMARY_DESCRIPTION
-})*/
+import appConfig from '../../app.config.json'
+const { summary } = appConfig.sections
 </script>
 
 <template>
@@ -24,12 +10,12 @@ const SUMMARY_DESCRIPTION = import.meta.env.VITE_SECTION_SUMMARY_DESCRIPTION
     </div>
     <div class="description-container">
       <h1 class="greeting">
-        {{ SUMMARY_GREETING }} <span class="name">{{ SUMMARY_GREETING_NAME }}</span>
+        {{ summary.greeting.text }} <span class="name">{{ summary.greeting.name }}</span>
       </h1>
       <h2 class="occupation">
-        {{ SUMMARY_OCCUPATION }}
+        {{ summary.occupation.text }}
       </h2>
-      <p>{{ SUMMARY_DESCRIPTION }}</p>
+      <p>{{ summary.description.text }}</p>
     </div>
   </div>
 </template>
