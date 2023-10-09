@@ -80,6 +80,11 @@ const SUMMARY_DESCRIPTION = import.meta.env.VITE_SECTION_SUMMARY_DESCRIPTION
   .summary {
     flex-direction: row-reverse;
 
+    .profile-photo-container {
+      margin-inline-start: 3.2rem;
+      align-items: center;
+    }
+
     .description-container {
       .greeting {
         text-align: left;
