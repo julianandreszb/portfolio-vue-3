@@ -62,7 +62,7 @@ const { summary } = appConfig.sections
   }
 }
 
-@include for-size(tablet-portrait-up) {
+@include for-size(tablet-landscape-up) {
   .summary {
     flex-direction: row-reverse;
 

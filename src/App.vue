@@ -2,9 +2,13 @@
 import TheNavBar from '@/components/TheNavBar.vue'
 import { routes } from '@/utils/routes'
 import VSection from '@/components/VSection.vue'
-import { EnumHeaders } from '@/utils/typeScriptDefinitions/enumHeaders'
+import { EnumHeaders } from '@/utils/typeScriptDefinitions/EnumHeaders'
 import VContentSummary from '@/components/VContentSummary.vue'
 import VContentAboutMe from '@/components/VContentAboutMe.vue'
+import appConfig from '../app.config.json'
+import VRatingBar from '@/components/VRatingBar.vue'
+
+const skillItems = appConfig.sections.skills.items
 </script>
 
 <template>
@@ -19,7 +23,12 @@ import VContentAboutMe from '@/components/VContentAboutMe.vue'
     >
       <v-content-about-me></v-content-about-me>
     </v-section>
-    <v-section section-id="skills"> </v-section>
+    <v-section
+      section-id="skills"
+      :header-tag="{ tagContent: 'my_skills', tagName: EnumHeaders.h2 }"
+    >
+      <VRatingBar :items="skillItems"></VRatingBar>
+    </v-section>
   </main>
 </template>
 

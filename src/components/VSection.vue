@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EnumHeaders } from '@/utils/typeScriptDefinitions/enumHeaders'
+import { EnumHeaders } from '@/utils/typeScriptDefinitions/EnumHeaders'
 
 type typeHeaderTag = {
   tagContent: string

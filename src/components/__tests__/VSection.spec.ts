@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { EnumHeaders } from '@/utils/typeScriptDefinitions/enumHeaders'
+import { EnumHeaders } from '../../utils/typeScriptDefinitions/EnumHeaders'
 import { mount } from '@vue/test-utils'
 import VSection from '@/components/VSection.vue'
 
