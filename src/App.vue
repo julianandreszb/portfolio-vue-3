@@ -7,6 +7,7 @@ import VContentSummary from '@/components/VContentSummary.vue'
 import VContentAboutMe from '@/components/VContentAboutMe.vue'
 import appConfig from '../app.config.json'
 import VRatingBar from '@/components/VRatingBar.vue'
+import VTag from '@/components/VTag.vue'
 
 const skillItems = appConfig.sections.skills.items
 </script>
@@ -29,6 +30,12 @@ const skillItems = appConfig.sections.skills.items
     >
       <VRatingBar :items="skillItems"></VRatingBar>
     </v-section>
+    <VTag
+      :tag="{
+        label: 'JavaScript',
+        icon: { class: 'bi-filetype-js' }
+      }"
+    />
   </main>
 </template>
 
