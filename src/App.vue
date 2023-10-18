@@ -1,85 +1,55 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import TheNavBar from '@/components/TheNavBar.vue'
+import { routes } from '@/utils/routes'
+import VSection from '@/components/VSection.vue'
+import { EnumHeaders } from '@/utils/typeScriptDefinitions/EnumHeaders'
+import VContentSummary from '@/components/blocks/VContentSummary.vue'
+import VContentAboutMe from '@/components/blocks/VContentAboutMe.vue'
+import appConfig from '../app.config.json'
+import VRatingBar from '@/components/blocks/VRatingBar.vue'
+import VPortfolio from '@/components/blocks/VPortfolio.vue'
+
+const skillItems = appConfig.sections.skills.items
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <TheNavBar :routes="routes"></TheNavBar>
+  <main>
+    <v-section section-id="summary">
+      <v-content-summary></v-content-summary>
+    </v-section>
+    <v-section
+      section-id="about-me"
+      :header-tag="{ tagContent: 'about_me', tagName: EnumHeaders.h2 }"
+    >
+      <v-content-about-me></v-content-about-me>
+    </v-section>
+    <v-section
+      section-id="skills"
+      :header-tag="{ tagContent: 'my_skills', tagName: EnumHeaders.h2 }"
+    >
+      <VRatingBar :items="skillItems"></VRatingBar>
+    </v-section>
+    <v-section
+      section-id="portfolio"
+      :header-tag="{ tagContent: 'portfolio', tagName: EnumHeaders.h2 }"
+    >
+      <v-portfolio></v-portfolio>
+    </v-section>
+  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style lang="scss" scoped>
+@import 'src/assets/sass/abstracts/mixin';
+
+main {
+  background-color: var(--color-background);
+  padding-inline: 1.6rem;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@include for-size(tablet-portrait-up) {
+  main {
+    padding-inline: 10rem;
   }
 }
 </style>

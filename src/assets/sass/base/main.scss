@@ -1,0 +1,15 @@
+@import './base';
+@import './../abstracts/variables';
+
+
+#app {
+  max-width: $max-width-viewport;
+  min-width: $min-width-viewport;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+p {
+  font-size: 2.4rem;
+  color: var(--color-text-black-60);
+}
