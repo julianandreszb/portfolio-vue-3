@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import appConfig from '../../app.config.json'
+import appConfig from '../../../app.config.json'
 const { summary } = appConfig.sections
 </script>
 
@@ -21,7 +21,7 @@ const { summary } = appConfig.sections
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/sass/abstracts/mixin';
+@import '../../assets/sass/abstracts/mixin';
 
 .summary {
   display: flex;

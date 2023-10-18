@@ -3,11 +3,11 @@ import TheNavBar from '@/components/TheNavBar.vue'
 import { routes } from '@/utils/routes'
 import VSection from '@/components/VSection.vue'
 import { EnumHeaders } from '@/utils/typeScriptDefinitions/EnumHeaders'
-import VContentSummary from '@/components/VContentSummary.vue'
-import VContentAboutMe from '@/components/VContentAboutMe.vue'
+import VContentSummary from '@/components/blocks/VContentSummary.vue'
+import VContentAboutMe from '@/components/blocks/VContentAboutMe.vue'
 import appConfig from '../app.config.json'
-import VRatingBar from '@/components/VRatingBar.vue'
-import VTag from '@/components/VTag.vue'
+import VRatingBar from '@/components/blocks/VRatingBar.vue'
+import VPortfolio from '@/components/blocks/VPortfolio.vue'
 
 const skillItems = appConfig.sections.skills.items
 </script>
@@ -15,7 +15,7 @@ const skillItems = appConfig.sections.skills.items
 <template>
   <TheNavBar :routes="routes"></TheNavBar>
   <main>
-    <v-section class="section-summary" section-id="summary">
+    <v-section section-id="summary">
       <v-content-summary></v-content-summary>
     </v-section>
     <v-section
@@ -30,12 +30,12 @@ const skillItems = appConfig.sections.skills.items
     >
       <VRatingBar :items="skillItems"></VRatingBar>
     </v-section>
-    <VTag
-      :tag="{
-        label: 'JavaScript',
-        icon: { class: 'bi-filetype-js' }
-      }"
-    />
+    <v-section
+      section-id="portfolio"
+      :header-tag="{ tagContent: 'portfolio', tagName: EnumHeaders.h2 }"
+    >
+      <v-portfolio></v-portfolio>
+    </v-section>
   </main>
 </template>
 

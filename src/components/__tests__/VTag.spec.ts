@@ -8,15 +8,16 @@ describe('VTag', () => {
     const wrapper = mount(VTag, {
       props: {
         tag: {
+          id: 'javascript',
           label: 'JavaScript',
-          icon: { class: 'filetype-js', style: { 'font-size': '2rem', color: 'red' } }
+          icon: { class: 'bi-filetype-js', style: { 'font-size': '2rem', color: 'red' } }
         }
       }
     })
-    const elHtml = wrapper.find('span:has(.filetype-js)').html()
+    const elHtml = wrapper.find('span:has(.bi-filetype-js)').html()
     expect(elHtml).contain(' JavaScript')
     expect(elHtml).contain('font-size: 2rem;')
     expect(elHtml).contain('color: red;')
-    expect(elHtml).contain('class="filetype-js"')
+    expect(elHtml).contain('class="bi-filetype-js"')
   })
 })

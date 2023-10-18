@@ -12,7 +12,7 @@ function getActiveClass(index: number, currentRating: number): string {
 }
 
 function getItemBackground(index: number, currentRating: number, maxRating: number) {
-  const opacity = index <= currentRating ? ((100 / maxRating) * index) / 100 : 0.03
+  const opacity = index <= currentRating ? ((100 / maxRating) * index) / 100 : 0
 
   return {
     'background-color': `rgba(0, 0, 0, ${opacity})`

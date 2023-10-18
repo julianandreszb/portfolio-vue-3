@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import VRatingBar from '@/components/VRatingBar.vue'
+import VRatingBar from '../blocks/VRatingBar.vue'
 
 describe('VRatingBar', () => {
   it('checks that rating bar items are displayed according to received ratingBarMap property', () => {

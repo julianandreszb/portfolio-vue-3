@@ -1,8 +1,7 @@
 interface ITag {
-  tag: {
-    label: string
-    icon?: { class: string; style?: Record<string, string> }
-  }
+  id: string
+  label: string
+  icon?: { class: string; style?: Record<string, string> }
 }
 
 export type { ITag }

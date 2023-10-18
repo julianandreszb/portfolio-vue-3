@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ITag } from '@/utils/typeScriptDefinitions/ITag'
 
-const props = defineProps<ITag>()
+const props = defineProps<{ tag: ITag }>()
 </script>
 
 <template>
@@ -16,13 +16,26 @@ const props = defineProps<ITag>()
 </template>
 
 <style scoped lang="scss">
+@import '../assets/sass/abstracts/mixin';
 span {
   display: inline-block;
   padding-block: 0.6rem;
   padding-inline: 0.8rem;
-  align-items: center;
-  gap: 8px;
   border-radius: 16px;
   background-color: #e6e6e6;
+
+  color: var(--color-text-black-60);
+  font-size: 1.8rem;
+  font-weight: 400;
+  &:hover {
+    cursor: pointer;
+    background-color: #bbbbbb;
+  }
+}
+
+@include for-size(tablet-landscape-up) {
+  span {
+    font-size: 2.4rem;
+  }
 }
 </style>
