@@ -52,7 +52,7 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   padding-inline: 1.6rem;
   background-color: var(--color-background);
   border-top: solid 1px var(--color-border-gray-light);
-  gap: 2rem; /* 3rem > phone */
+  gap: 1rem; /* 3rem > phone */
 
   //https://vuejs.org/api/sfc-css-features.html#scoped-css
 

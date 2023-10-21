@@ -56,8 +56,8 @@ function getItemBackground(index: number, currentRating: number, maxRating: numb
     list-style: none;
 
     li {
-      width: 5rem;
-      height: 2.5rem;
+      width: 4rem;
+      height: 2rem;
       border-radius: 16px;
       border: 1px solid var(--color-border-dark);
     }
@@ -68,8 +68,8 @@ function getItemBackground(index: number, currentRating: number, maxRating: numb
   .rating-bar-line {
     ul {
       li {
-        width: 10rem;
-        height: 5rem;
+        width: 6rem;
+        height: 3rem;
       }
     }
   }

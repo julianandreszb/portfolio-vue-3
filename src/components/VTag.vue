@@ -5,7 +5,7 @@ const props = defineProps<{ tag: ITag }>()
 </script>
 
 <template>
-  <span>
+  <span :class="{ active: props.tag.isActive }">
     <i
       v-if="props.tag?.icon?.class"
       :class="props.tag.icon.class"
@@ -30,6 +30,11 @@ span {
   &:hover {
     cursor: pointer;
     background-color: #bbbbbb;
+  }
+
+  &.active {
+    background-color: #000000;
+    color: #ffffff;
   }
 }
 

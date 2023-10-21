@@ -126,26 +126,6 @@ const toggleMainMenu = function () {
         background-color: var(--color-background-soft);
       }
     }
-
-    /*TODO: DESKTOP VERSION*/
-    /*.menu-item {
-      list-style: none;
-      min-width: 7rem;
-      text-align: center;
-
-      a {
-        white-space: nowrap;
-        text-decoration: none;
-
-        &:visited {
-          color: var(--color-text);
-        }
-
-        &:hover {
-          font-weight: bold;
-        }
-      }
-    }*/
   }
 
   @include for-size(tablet-portrait-up) {
