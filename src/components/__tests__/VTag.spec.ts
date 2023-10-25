@@ -14,10 +14,10 @@ describe('VTag', () => {
         }
       }
     })
-    const elHtml = wrapper.find('span:has(.bi-filetype-js)').html()
-    expect(elHtml).contain(' JavaScript')
-    expect(elHtml).contain('font-size: 2rem;')
-    expect(elHtml).contain('color: red;')
-    expect(elHtml).contain('class="bi-filetype-js"')
+    const elJs = wrapper.find('[data-testid="javascript"]').html()
+    expect(elJs).contain(' JavaScript')
+    expect(elJs).contain('font-size: 2rem;')
+    expect(elJs).contain('color: red;')
+    expect(elJs).contain('class="bi-filetype-js"')
   })
 })

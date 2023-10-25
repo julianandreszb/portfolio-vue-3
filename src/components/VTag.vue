@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import type { ITag } from '@/utils/typeScriptDefinitions/ITag'
 
-const props = defineProps<{ tag: ITag }>()
+defineProps<{ tag: ITag }>()
 </script>
 
 <template>
-  <span :class="{ active: props.tag.isActive }">
-    <i
-      v-if="props.tag?.icon?.class"
-      :class="props.tag.icon.class"
-      :style="props.tag.icon.style"
-    ></i>
-    {{ props.tag.label }}</span
+  <span :data-testid="tag.id" :class="{ active: tag.isActive }">
+    <i v-if="tag?.icon?.class" :class="tag.icon.class" :style="tag.icon.style"></i>
+    {{ tag.label }}</span
   >
 </template>
 
