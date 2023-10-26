@@ -22,6 +22,8 @@ function handleTagClick(tag: ITag) {
 </template>
 
 <style scoped lang="scss">
+@import '../assets/sass/abstracts/mixin';
+
 .filter-section {
   display: flex;
   gap: 1.6rem;
@@ -30,5 +32,33 @@ function handleTagClick(tag: ITag) {
   padding-inline: 1.6rem;
   border: 2px solid var(--color-border-gray-light);
   border-radius: 16px;
+
+  span {
+    display: inline-block;
+    padding-block: 0.6rem;
+    padding-inline: 0.8rem;
+    border-radius: 16px;
+    background-color: #e6e6e6;
+
+    color: var(--color-text-black-60);
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #bbbbbb;
+    }
+
+    &.active {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+
+  @include for-size(tablet-landscape-up) {
+    span {
+      font-size: 2.4rem;
+    }
+  }
 }
 </style>
