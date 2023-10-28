@@ -29,6 +29,10 @@ article {
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
   gap: 1.6rem;
 
+  p::first-letter {
+    text-transform: capitalize;
+  }
+
   .tag-container,
   .link-icon-container {
     display: flex;

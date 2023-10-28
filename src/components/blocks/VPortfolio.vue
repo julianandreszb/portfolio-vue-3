@@ -92,7 +92,7 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
 
   :deep(article) {
     h3 {
-      color: var(--color-text-black-60);
+      color: var(--color-text);
       font-size: 2.4rem;
       font-weight: 600;
       line-height: 1.6rem;
@@ -105,20 +105,27 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
       font-weight: 400;
       line-height: 1.6rem;
     }
-  }
+    .tag-container,
+    .link-icon-container {
+      span {
+        display: inline-block;
+        padding-block: 0.1rem;
+        padding-inline: 0.8rem;
+        border-radius: 16px;
+        background-color: #e6e6e6;
 
-  :deep(.tag-container),
-  :deep(.link-icon-container) {
-    span {
-      display: inline-block;
-      padding-block: 0.1rem;
-      padding-inline: 0.8rem;
-      border-radius: 16px;
-      background-color: #e6e6e6;
+        color: var(--color-text-black-60);
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+    }
 
-      color: var(--color-text-black-60);
-      font-size: 1.6rem;
-      font-weight: 400;
+    .link-icon-container {
+      span {
+        color: var(--color-text);
+        font-size: 2.4rem;
+        cursor: pointer;
+      }
     }
   }
 }
