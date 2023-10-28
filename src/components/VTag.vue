@@ -5,7 +5,7 @@ defineProps<{ tag: ITag }>()
 </script>
 
 <template>
-  <span :data-testid="tag.id" :class="{ active: tag.isActive }">
+  <span :data-testid="tag.id" :class="{ active: tag.isActive }" :style="tag.style">
     <i v-if="tag?.icon?.class" :class="tag.icon.class" :style="tag.icon.style"></i>
     {{ tag.label }}
   </span>

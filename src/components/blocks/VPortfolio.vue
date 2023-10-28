@@ -48,12 +48,24 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
         linkIcons: [
           {
             id: 'git',
-            label: 'Git',
+            label: '',
+            style: {
+              'background-color': 'transparent'
+            },
+            icon: {
+              class: 'bi-github'
+            },
             isActive: false
           },
           {
             id: 'demo',
-            label: 'Demo',
+            label: '',
+            style: {
+              'background-color': 'transparent'
+            },
+            icon: {
+              class: 'bi-box-arrow-up-right'
+            },
             isActive: false
           }
         ]
@@ -78,7 +90,25 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
   padding-block: 1.6rem;
   padding-inline: 1.6rem;
 
-  @mixin tag-base-item {
+  :deep(article) {
+    h3 {
+      color: var(--color-text-black-60);
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1.6rem;
+    }
+
+    p {
+      color: var(--color-text-black-60);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.6rem;
+    }
+  }
+
+  :deep(.tag-container),
+  :deep(.link-icon-container) {
     span {
       display: inline-block;
       padding-block: 0.1rem;
@@ -90,13 +120,6 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
       font-size: 1.6rem;
       font-weight: 400;
     }
-  }
-
-  :deep(.tag-container) {
-    @include tag-base-item;
-  }
-  :deep(.link-icon-container) {
-    @include tag-base-item;
   }
 }
 </style>

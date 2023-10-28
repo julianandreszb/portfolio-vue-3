@@ -41,7 +41,7 @@ function handleTagClick(tag: ITag) {
     background-color: #e6e6e6;
 
     color: var(--color-text-black-60);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
 
     &:hover {

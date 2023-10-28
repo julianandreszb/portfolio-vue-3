@@ -35,25 +35,21 @@
         {
           "id": "javascript",
           "label": "JavaScript",
-          "icon": { "class": "bi-filetype-js" },
           "isActive" : true
         },
         {
           "id": "html",
           "label": "HTML",
-          "icon": { "class": "bi-filetype-html" },
           "isActive" : true
         },
         {
           "id": "github",
           "label": "Github",
-          "icon": { "class": "bi-github" },
           "isActive" : true
         },
         {
           "id": "php",
           "label": "PHP",
-          "icon": { "class": "bi-filetype-php" },
           "isActive" : true
         }
       ]
