@@ -7,7 +7,7 @@ describe('VCard', () => {
   let wrapper
 
   beforeAll(async () => {
-    wrapper = await mount(VCard, {
+    wrapper = mount(VCard, {
       props: {
         card: {
           title: 'Binary To Decimal',

@@ -12,9 +12,8 @@ defineProps<{ card: ICard }>()
     <div class="tag-container" v-if="card.tags">
       <VTag v-for="tag in card.tags" :tag="tag" :key="tag.id" />
     </div>
-    <div>
-      <span>Git</span>
-      <span>Demo</span>
+    <div class="link-icon-container" v-if="card.linkIcons">
+      <VTag v-for="linkIcon in card.linkIcons" :tag="linkIcon" :key="linkIcon.id" />
     </div>
   </article>
 </template>
@@ -27,7 +26,8 @@ article {
   border-radius: 16px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
 
-  .tag-container {
+  .tag-container,
+  .link-icon-container {
     display: flex;
     flex-direction: row;
     gap: 0.8rem;

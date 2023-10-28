@@ -44,6 +44,18 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
             label: 'HTML',
             isActive: false
           }
+        ],
+        linkIcons: [
+          {
+            id: 'git',
+            label: 'Git',
+            isActive: false
+          },
+          {
+            id: 'demo',
+            label: 'Demo',
+            isActive: false
+          }
         ]
       }"
     />
@@ -66,7 +78,7 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
   padding-block: 1.6rem;
   padding-inline: 1.6rem;
 
-  :deep(.tag-container) {
+  @mixin tag-base-item {
     span {
       display: inline-block;
       padding-block: 0.1rem;
@@ -77,14 +89,14 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
       color: var(--color-text-black-60);
       font-size: 1.6rem;
       font-weight: 400;
-      //user-select: none;
     }
+  }
 
-    @include for-size(tablet-landscape-up) {
-      span {
-        //font-size: 2.4rem;
-      }
-    }
+  :deep(.tag-container) {
+    @include tag-base-item;
+  }
+  :deep(.link-icon-container) {
+    @include tag-base-item;
   }
 }
 </style>
