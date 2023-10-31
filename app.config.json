@@ -11,23 +11,53 @@
       "photo": {
         "src": "/profile-picture.png"
       },
-      "description" : {
+      "description": {
         "text": "I'm a full-stack web developer making great stuff happen since 2013. Currently building awesome code and apps at Life-File"
       }
     },
     "aboutMe": {
       "description": {
-        "text":"I’ve been coding for more than 10 years. I’ve created everything from regular websites, to complex webs and mobile applications. I have an extensive experience in back-end using Node.js and PHP.  I’m growing as front-end developer using Vue 2.x & 3.x"
+        "text": "I’ve been coding for more than 10 years. I’ve created everything from regular websites, to complex webs and mobile applications. I have an extensive experience in back-end using Node.js and PHP.  I’m growing as front-end developer using Vue 2.x & 3.x"
       }
     },
     "skills": {
       "items": [
-        { "id": "test_0", "label": "TEST #0", "currentRating": 0, "maxRating": 5 },
-        { "id": "test_1", "label": "TEST #1", "currentRating": 1, "maxRating": 5 },
-        { "id": "test_2", "label": "TEST #2", "currentRating": 2, "maxRating": 5 },
-        { "id": "test_3", "label": "TEST #3", "currentRating": 3, "maxRating": 5 },
-        { "id": "test_4", "label": "TEST #4", "currentRating": 4, "maxRating": 5 },
-        { "id": "test_5", "label": "TEST #5", "currentRating": 5, "maxRating": 5 }
+        {
+          "id": "test_0",
+          "label": "TEST #0",
+          "currentRating": 0,
+          "maxRating": 5
+        },
+        {
+          "id": "test_1",
+          "label": "TEST #1",
+          "currentRating": 1,
+          "maxRating": 5
+        },
+        {
+          "id": "test_2",
+          "label": "TEST #2",
+          "currentRating": 2,
+          "maxRating": 5
+        },
+        {
+          "id": "test_3",
+          "label": "TEST #3",
+          "currentRating": 3,
+          "maxRating": 5
+        },
+        {
+          "id": "test_4",
+          "label": "TEST #4",
+          "currentRating": 4,
+          "maxRating": 5
+        },
+        {
+          "id": "test_5",
+          "label": "TEST #5",
+          "currentRating": 5,
+          "maxRating": 5
+        }
       ]
     },
     "portfolio": {
@@ -35,22 +65,108 @@
         {
           "id": "javascript",
           "label": "JavaScript",
-          "isActive" : true
+          "isActive": true
         },
         {
           "id": "html",
           "label": "HTML",
-          "isActive" : true
+          "isActive": true
         },
         {
           "id": "github",
           "label": "Github",
-          "isActive" : true
+          "isActive": true
         },
         {
           "id": "php",
           "label": "PHP",
-          "isActive" : true
+          "isActive": true
+        }
+      ],
+      "projects": [
+        {
+          "isActive": true,
+          "id" : "custom-id-1",
+          "title": "Test",
+          "description": "description description description",
+          "tags": [
+            {
+              "id": "javascript",
+              "label": "JavaScript",
+              "isActive": false
+            },
+            {
+              "id": "html",
+              "label": "HTML",
+              "isActive": false
+            }
+          ],
+          "linkIcons": [
+            {
+              "id": "git",
+              "label": "",
+              "style": {
+                "background-color": "transparent"
+              },
+              "icon": {
+                "class": "bi-github"
+              },
+              "isActive": false
+            },
+            {
+              "id": "demo",
+              "label": "",
+              "style": {
+                "background-color": "transparent"
+              },
+              "icon": {
+                "class": "bi-box-arrow-up-right"
+              },
+              "isActive": false
+            }
+          ]
+        },
+        {
+          "isActive": true,
+          "id" : "custom-id-2",
+          "title": "Test With large title",
+          "description": "description description description description description description description description description description description description",
+          "tags": [
+            {
+              "id": "javascript",
+              "label": "JavaScript",
+              "isActive": false
+            },
+            {
+              "id": "html",
+              "label": "HTML",
+              "isActive": false
+            }
+          ],
+          "linkIcons": [
+            {
+              "id": "git",
+              "label": "",
+              "style": {
+                "background-color": "transparent"
+              },
+              "icon": {
+                "class": "bi-github"
+              },
+              "isActive": false
+            },
+            {
+              "id": "demo",
+              "label": "",
+              "style": {
+                "background-color": "transparent"
+              },
+              "icon": {
+                "class": "bi-box-arrow-up-right"
+              },
+              "isActive": false
+            }
+          ]
         }
       ]
     }

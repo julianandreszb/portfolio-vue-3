@@ -7,11 +7,13 @@ defineProps<{ card: ICard }>()
 
 <template>
   <article>
-    <div class="link-icon-container" v-if="card.linkIcons">
-      <VTag v-for="linkIcon in card.linkIcons" :tag="linkIcon" :key="linkIcon.id" />
+    <div class="card-top-wrapper">
+      <div class="link-icon-container" v-if="card.linkIcons">
+        <VTag v-for="linkIcon in card.linkIcons" :tag="linkIcon" :key="linkIcon.id" />
+      </div>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
     </div>
-    <h3>{{ card.title }}</h3>
-    <p>{{ card.description }}</p>
     <div class="tag-container" v-if="card.tags">
       <VTag v-for="tag in card.tags" :tag="tag" :key="tag.id" />
     </div>
@@ -28,6 +30,13 @@ article {
   border-radius: 16px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
   gap: 1.6rem;
+  justify-content: space-between;
+
+  .card-top-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 
   p::first-letter {
     text-transform: capitalize;
