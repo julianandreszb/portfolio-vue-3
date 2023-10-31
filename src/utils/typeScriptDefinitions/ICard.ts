@@ -5,7 +5,7 @@ interface ICard {
   id: string
   title: string
   description: string
-  tags?: Array<ITag>
+  tags: Array<ITag>
   linkIcons?: Array<ITag> // CHANGE TO ILinkIcon
 }
 export type { ICard }

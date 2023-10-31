@@ -70,17 +70,22 @@
         {
           "id": "html",
           "label": "HTML",
-          "isActive": true
+          "isActive": false
         },
         {
           "id": "github",
           "label": "Github",
-          "isActive": true
+          "isActive": false
         },
         {
           "id": "php",
           "label": "PHP",
-          "isActive": true
+          "isActive": false
+        },
+        {
+          "id": "vue3",
+          "label": "Vue3",
+          "isActive": false
         }
       ],
       "projects": [
@@ -133,13 +138,13 @@
           "description": "description description description description description description description description description description description description",
           "tags": [
             {
-              "id": "javascript",
-              "label": "JavaScript",
+              "id": "php",
+              "label": "PHP",
               "isActive": false
             },
             {
-              "id": "html",
-              "label": "HTML",
+              "id": "vue3",
+              "label": "Vue3",
               "isActive": false
             }
           ],

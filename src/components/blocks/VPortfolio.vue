@@ -1,76 +1,43 @@
 <script setup lang="ts">
 import VTagFilter from '@/components/VTagFilter.vue'
 import appConfig from '../../../app.config.json'
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import type { ITag, TagFilterOperation } from '@/utils/typeScriptDefinitions/ITag'
 import VCard from '@/components/VCard.vue'
+import type { ICard } from '@/utils/typeScriptDefinitions/ICard'
 const { portfolio } = appConfig.sections
 
 const filteredTags = reactive(portfolio.tags)
 
 function handleTagSelected(tagOperation: TagFilterOperation) {
-  if (tagOperation.action === 'setActive') {
-    filteredTags.map((tag: ITag) => {
-      if (tag.id === tagOperation.id) {
-        tag.isActive = true
-      }
-    })
-  }
-  if (tagOperation.action === 'setInactive') {
-    filteredTags.map((tag: ITag) => {
-      if (tag.id === tagOperation.id) {
-        tag.isActive = false
-      }
-    })
-  }
+  filteredTags.map((tag: ITag) => {
+    if (tag.id === tagOperation.id) {
+      tag.isActive = tagOperation.action === 'setActive'
+    }
+  })
 }
+
+let filteredProjects = computed(() => {
+  if (!filteredTags.some((tag) => tag.isActive)) {
+    return portfolio.projects
+  }
+
+  return portfolio.projects.filter((project: ICard) => {
+    if (!project.tags.length) {
+      return false
+    }
+
+    return filteredTags.some((tag) => {
+      return tag.isActive && project.tags.some((projectTag) => tag.id === projectTag.id)
+    })
+  })
+})
 </script>
 
 <template>
   <VTagFilter :tags="filteredTags" @emitTagSelected="handleTagSelected" />
   <section class="project-container">
-    <VCard
-      :card="{
-        title: 'Test',
-        description: 'description description description',
-        tags: [
-          {
-            id: 'javascript',
-            label: 'JavaScript',
-            isActive: false
-          },
-          {
-            id: 'html',
-            label: 'HTML',
-            isActive: false
-          }
-        ],
-        linkIcons: [
-          {
-            id: 'git',
-            label: '',
-            style: {
-              'background-color': 'transparent'
-            },
-            icon: {
-              class: 'bi-github'
-            },
-            isActive: false
-          },
-          {
-            id: 'demo',
-            label: '',
-            style: {
-              'background-color': 'transparent'
-            },
-            icon: {
-              class: 'bi-box-arrow-up-right'
-            },
-            isActive: false
-          }
-        ]
-      }"
-    />
+    <VCard v-for="project in filteredProjects" :card="project" :key="project.id"></VCard>
   </section>
 </template>
 
@@ -78,17 +45,24 @@ function handleTagSelected(tagOperation: TagFilterOperation) {
 @import '../../assets/sass/abstracts/mixin';
 
 .project-container {
-  display: flex;
-  //align-items: flex-start;
+  display: grid;
+  gap: 1.6rem;
+  //grid-auto-rows: 25rem; /*height*/
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  padding-block: 1.6rem;
+  padding-inline: 1.6rem;
+  border: 2px solid rgba(230, 230, 230, 0.6);
+  background-color: var(--color-background-soft);
+  /*display: flex;
+  align-items: flex-start;
   //align-content: flex-start;
   gap: 1.6rem;
   //flex-shrink: 0;
   //align-self: stretch;
-  flex-wrap: wrap;
   border: 2px solid rgba(230, 230, 230, 0.6);
   background-color: var(--color-background-soft);
   padding-block: 1.6rem;
-  padding-inline: 1.6rem;
+  padding-inline: 1.6rem;*/
 
   :deep(article) {
     h3 {
