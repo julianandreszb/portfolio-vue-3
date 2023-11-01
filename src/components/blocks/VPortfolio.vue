@@ -47,22 +47,11 @@ let filteredProjects = computed(() => {
 .project-container {
   display: grid;
   gap: 1.6rem;
-  //grid-auto-rows: 25rem; /*height*/
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   padding-block: 1.6rem;
   padding-inline: 1.6rem;
   border: 2px solid rgba(230, 230, 230, 0.6);
   background-color: var(--color-background-soft);
-  /*display: flex;
-  align-items: flex-start;
-  //align-content: flex-start;
-  gap: 1.6rem;
-  //flex-shrink: 0;
-  //align-self: stretch;
-  border: 2px solid rgba(230, 230, 230, 0.6);
-  background-color: var(--color-background-soft);
-  padding-block: 1.6rem;
-  padding-inline: 1.6rem;*/
 
   :deep(article) {
     h3 {
