@@ -8,6 +8,7 @@ import VContentAboutMe from '@/components/blocks/VContentAboutMe.vue'
 import appConfig from '../app.config.json'
 import VRatingBar from '@/components/blocks/VRatingBar.vue'
 import VPortfolio from '@/components/blocks/VPortfolio.vue'
+import VCareer from '@/components/blocks/VCareer.vue'
 
 const skillItems = appConfig.sections.skills.items
 </script>
@@ -35,6 +36,9 @@ const skillItems = appConfig.sections.skills.items
       :header-tag="{ tagContent: 'portfolio', tagName: EnumHeaders.h2 }"
     >
       <v-portfolio></v-portfolio>
+    </v-section>
+    <v-section section-id="career" :header-tag="{ tagContent: 'career', tagName: EnumHeaders.h2 }">
+      <v-career></v-career>
     </v-section>
   </main>
 </template>
