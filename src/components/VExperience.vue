@@ -9,8 +9,8 @@ defineProps<{ experience: IExperience }>()
     <section>
       <div class="heading-summary">
         <h3>{{ experience.title }}</h3>
-        <span class="company">{{ experience.company }}</span>
-        <span class="">{{ `${experience.startDate} - ${experience.endDate}` }}</span>
+        <span class="start-point">{{ experience.company }}</span>
+        <span class="start-point">{{ `${experience.startDate} - ${experience.endDate}` }}</span>
       </div>
 
       <p>{{ experience.description }}</p>
@@ -39,6 +39,10 @@ defineProps<{ experience: IExperience }>()
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+
+      .start-point::before {
+        content: '';
+      }
     }
 
     .tag-wrap {
@@ -59,6 +63,10 @@ defineProps<{ experience: IExperience }>()
     @include for-size(tablet-landscape-up) {
       .heading-summary {
         flex-direction: row;
+
+        .start-point::before {
+          content: ' · ';
+        }
       }
     }
   }
