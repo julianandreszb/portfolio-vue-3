@@ -1,27 +1,12 @@
 <script setup lang="ts">
 import VExperience from '@/components/VExperience.vue'
+import appConfig from '../../../app.config.json'
+const { career } = appConfig.sections
 </script>
 
 <template>
   <div class="career-container">
-    <VExperience
-      :experience="{
-        id: 'lifefile',
-        title: 'Software Engineer',
-        company: '@LIFE-FILE',
-        startDate: '2013',
-        endDate: 'Present'
-      }"
-    />
-    <VExperience
-      :experience="{
-        id: 'lifefile',
-        title: 'Software Engineer',
-        company: '@LIFE-FILE',
-        startDate: '2013',
-        endDate: 'Present'
-      }"
-    />
+    <VExperience v-for="experience in career" :experience="experience" :key="experience.id" />
   </div>
 </template>
 
@@ -32,15 +17,14 @@ import VExperience from '@/components/VExperience.vue'
   gap: 2.4rem;
 
   :deep(.experience-wrap) {
-    section {
-      //border-bottom: 1px dashed var(--color-border-dark);
+    .heading-summary {
       padding-bottom: 1rem;
       border-width: 3px;
 
       h3 {
         font-size: 2rem;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 2rem;
       }
 
@@ -50,19 +34,6 @@ import VExperience from '@/components/VExperience.vue'
         font-weight: 400;
         line-height: 2rem;
       }
-    }
-
-    .border-gradient {
-      height: 0.4rem;
-      width: 100%;
-      border-bottom: 3px solid transparent;
-
-      background: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        transparent 100%
-      );
     }
   }
 }

@@ -58,15 +58,15 @@ let filteredProjects = computed(() => {
       color: var(--color-text);
       font-size: 2.4rem;
       font-weight: 600;
-      line-height: 1.6rem;
+      line-height: 2.4rem;
     }
 
     p {
       color: var(--color-text-black-60);
-      font-size: 16px;
+
       font-style: normal;
       font-weight: 400;
-      line-height: 1.6rem;
+      //line-height: 1.6rem;
     }
     .tag-container,
     .link-icon-container {
