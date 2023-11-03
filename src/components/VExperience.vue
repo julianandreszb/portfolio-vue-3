@@ -11,6 +11,7 @@ defineProps<{ experience: IExperience }>()
       <span class="company">{{ experience.company }}</span>
       <span class="">{{ `${experience.startDate} - ${experience.endDate}` }}</span>
     </section>
+    <div class="border-gradient"></div>
   </article>
 </template>
 
