@@ -8,15 +8,16 @@ defineProps<{ experience: IExperience }>()
   <article class="experience-wrap">
     <section>
       <div class="heading-summary">
-        <h3>{{ experience.title }}</h3>
-        <span class="start-point">{{ experience.company }}</span>
-        <span class="start-point">{{ `${experience.startDate} - ${experience.endDate}` }}</span>
+        <h3 data-testid="job-title">{{ experience.title }}</h3>
+        <span data-testid="company-name" class="start-point">{{ experience.company }}</span>
+        <span data-testid="time-in-company" class="start-point">{{
+          `${experience.startDate} - ${experience.endDate}`
+        }}</span>
       </div>
-
-      <p>{{ experience.description }}</p>
+      <p data-testid="job-description">{{ experience.description }}</p>
       <div class="tag-wrap">
         <span>Skills:</span>
-        <ul>
+        <ul class="skill-list">
           <li v-for="(tag, index) in experience.tags" :key="tag">{{ index ? `· ${tag}` : tag }}</li>
         </ul>
       </div>
