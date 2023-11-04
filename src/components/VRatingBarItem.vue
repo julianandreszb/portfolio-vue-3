@@ -58,7 +58,7 @@ function getItemBackground(index: number, currentRating: number, maxRating: numb
     li {
       width: 4rem;
       height: 2rem;
-      border-radius: 16px;
+      border-radius: 6px;
       border: 1px solid var(--color-border-dark);
     }
   }
