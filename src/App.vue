@@ -41,7 +41,9 @@ const skillItems = appConfig.sections.skills.items
     <v-section section-id="career" :header-tag="{ tagContent: 'career', tagName: EnumHeaders.h2 }">
       <v-career></v-career>
     </v-section>
-    <v-contact></v-contact>
+    <v-section section-id="contact" :header-tag="{ tagContent: '', tagName: EnumHeaders.h2 }">
+      <v-contact></v-contact>
+    </v-section>
   </main>
 </template>
 

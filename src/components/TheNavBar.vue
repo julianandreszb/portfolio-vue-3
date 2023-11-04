@@ -37,7 +37,10 @@ const toggleMainMenu = function () {
         :key="route.id"
         :data-testid="route.id"
       >
-        <a href="#">{{ route.label }}</a>
+        <!--        <a :href="route.hash">{{ route.label }}</a>-->
+        <router-link :to="{ name: 'home', hash: route.hash }">
+          {{ route.label }}
+        </router-link>
       </li>
     </ul>
   </nav>
