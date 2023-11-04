@@ -24,6 +24,7 @@
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.47);
   --vt-c-text-dark-3: rgba(0, 0, 0, 0.6);
+  --vt-c-text-dark-4: rgba(0, 0, 0, 0.4);
 }
 
 /* semantic color variables for this project */
@@ -41,6 +42,7 @@
   --color-text: var(--vt-c-text-light-1);
   --color-text-black: var(--vt-c-black);
   --color-text-black-60: var(--vt-c-text-dark-3);
+  --color-text-black-40: var(--vt-c-text-dark-4);
 
   --section-gap: 160px;
 }
