@@ -20,7 +20,7 @@ const currentDate = new Date()
         </span>
       </div>
     </address>
-    <h4>© {{ currentDate.getFullYear() }} JulianZB.com</h4>
+    <h4>© {{ currentDate.getFullYear() }} {{ contact.copyright }}</h4>
   </footer>
 </template>
 
