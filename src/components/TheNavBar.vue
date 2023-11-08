@@ -17,6 +17,20 @@ const toggleMainMenu = function () {
   isHamburgerMenuExpanded.value = !isHamburgerMenuExpanded.value
   isMainMenuExpanded.value = !isMainMenuExpanded.value
 }
+
+const defaultMenu = props.routes.length ? props.routes[0].id : ''
+
+console.log(`defaultMenu: ${defaultMenu}`)
+
+const selectedMenu = ref(defaultMenu)
+
+console.log(`selectedMenu: ${selectedMenu.value}`)
+
+function onMenuSelected(routeId: string) {
+  console.log(`routeId: ${routeId}`)
+  selectedMenu.value = routeId
+  console.log(`selectedMenu.value: ${selectedMenu.value}`)
+}
 </script>
 
 <template>
@@ -38,7 +52,11 @@ const toggleMainMenu = function () {
         :data-testid="route.id"
       >
         <!--        <a :href="route.hash">{{ route.label }}</a>-->
-        <router-link :to="{ name: 'home', hash: route.hash }">
+        <router-link
+          :class="{ active: selectedMenu === route.id }"
+          :to="{ name: 'home', hash: route.hash }"
+          @click="onMenuSelected(route.id)"
+        >
           {{ route.label }}
         </router-link>
       </li>
@@ -148,6 +166,10 @@ const toggleMainMenu = function () {
 
         a {
           &:hover {
+            font-weight: bold;
+          }
+
+          &.active {
             font-weight: bold;
           }
         }

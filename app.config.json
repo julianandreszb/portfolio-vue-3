@@ -91,7 +91,7 @@
       "projects": [
         {
           "isActive": true,
-          "id" : "custom-id-1",
+          "id": "custom-id-1",
           "title": "NADA Project",
           "description": "Back-end Developer: Develop robust server-side applications and APIs to support our web and mobile applications.",
           "tags": [
@@ -133,7 +133,7 @@
         },
         {
           "isActive": true,
-          "id" : "custom-id-2",
+          "id": "custom-id-2",
           "title": "Binary To Decimal",
           "description": "Back-end Developer: Develop robust server-side applications and APIs to support our web and mobile applications.",
           "tags": [
@@ -175,7 +175,7 @@
         }
       ]
     },
-    "career" : [
+    "career": [
       {
         "id": "lifefile",
         "title": "Full-Stack Web Developer",
@@ -183,7 +183,11 @@
         "startDate": "2013",
         "endDate": "Present",
         "description": "Back-end Developer: Develop robust server-side applications and APIs to support our web and mobile applications. Optimize database performance and ensure data security",
-        "tags": ["PHP", "Laravel", "Vue"]
+        "tags": [
+          "PHP",
+          "Laravel",
+          "Vue"
+        ]
       },
       {
         "id": "lifefile",
@@ -192,10 +196,14 @@
         "startDate": "2015",
         "endDate": "2018",
         "description": "Front-end Developer: Create responsive and visually appealing user interfaces for our web applications, ensuring seamless user experiences across various devices and browsers.",
-        "tags": ["HTML", "CSS", "JavaScript"]
+        "tags": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
       }
     ],
-    "contact" : {
+    "contact": {
       "title": "Contact Me!",
       "email": "contact@julianzb.com",
       "socialMedia": [
@@ -215,7 +223,8 @@
             "class": "bi-github"
           }
         }
-      ]
+      ],
+      "copyright": "JulianZB.com"
     }
   }
 }
