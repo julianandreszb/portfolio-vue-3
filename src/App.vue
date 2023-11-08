@@ -20,10 +20,7 @@ const skillItems = appConfig.sections.skills.items
     <v-section section-id="summary">
       <v-content-summary></v-content-summary>
     </v-section>
-    <v-section
-      section-id="about-me"
-      :header-tag="{ tagContent: 'about_me', tagName: EnumHeaders.h2 }"
-    >
+    <v-section section-id="about" :header-tag="{ tagContent: 'about_me', tagName: EnumHeaders.h2 }">
       <v-content-about-me></v-content-about-me>
     </v-section>
     <v-section
