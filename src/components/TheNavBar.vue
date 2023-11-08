@@ -19,17 +19,10 @@ const toggleMainMenu = function () {
 }
 
 const defaultMenu = props.routes.length ? props.routes[0].id : ''
-
-console.log(`defaultMenu: ${defaultMenu}`)
-
 const selectedMenu = ref(defaultMenu)
 
-console.log(`selectedMenu: ${selectedMenu.value}`)
-
 function onMenuSelected(routeId: string) {
-  console.log(`routeId: ${routeId}`)
   selectedMenu.value = routeId
-  console.log(`selectedMenu.value: ${selectedMenu.value}`)
 }
 </script>
 
@@ -51,7 +44,6 @@ function onMenuSelected(routeId: string) {
         :key="route.id"
         :data-testid="route.id"
       >
-        <!--        <a :href="route.hash">{{ route.label }}</a>-->
         <router-link
           :class="{ active: selectedMenu === route.id }"
           :to="{ name: 'home', hash: route.hash }"
