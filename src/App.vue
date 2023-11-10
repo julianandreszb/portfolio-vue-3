@@ -17,7 +17,7 @@ const routes = appConfig.routes
 <template>
   <TheNavBar :routes="routes"></TheNavBar>
   <main>
-    <v-section section-id="summary">
+    <v-section section-id="home">
       <v-content-summary></v-content-summary>
     </v-section>
     <v-section section-id="about" :header-tag="{ tagContent: 'about_me', tagName: EnumHeaders.h2 }">

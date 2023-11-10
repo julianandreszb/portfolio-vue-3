@@ -1,5 +1,6 @@
 {
   "routes": [
+    { "id": "nav-item-Home", "label": "Home", "hash": "#home" },
     { "id": "nav-item-about", "label": "About Me", "hash": "#about" },
     { "id": "nav-item-skills", "label": "Skills", "hash": "#skills" },
     { "id": "nav-item-portfolio", "label": "Portfolio", "hash": "#portfolio" },
@@ -123,7 +124,8 @@
               "icon": {
                 "class": "bi-github"
               },
-              "isActive": false
+              "isActive": false,
+              "title": "Open Git Repository"
             },
             {
               "id": "demo",
@@ -134,7 +136,8 @@
               "icon": {
                 "class": "bi-box-arrow-up-right"
               },
-              "isActive": false
+              "isActive": false,
+              "title": "Open Demo"
             }
           ]
         },
@@ -165,7 +168,8 @@
               "icon": {
                 "class": "bi-github"
               },
-              "isActive": false
+              "isActive": false,
+              "title": "Open Git Repository"
             },
             {
               "id": "demo",
@@ -176,7 +180,8 @@
               "icon": {
                 "class": "bi-box-arrow-up-right"
               },
-              "isActive": false
+              "isActive": false,
+              "title": "Open Demo"
             }
           ]
         }

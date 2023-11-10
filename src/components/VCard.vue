@@ -3,16 +3,28 @@ import type { ICard } from '@/utils/typeScriptDefinitions/ICard'
 import VTag from '@/components/VTag.vue'
 
 defineProps<{ card: ICard }>()
+
+function trimText(text: string, maxLength: number): string {
+  if (text.length > maxLength) {
+    return `${text.slice(0, maxLength)}...`
+  }
+  return text
+}
 </script>
 
 <template>
   <article>
     <div class="card-top-wrapper">
       <div class="link-icon-container" v-if="card.linkIcons">
-        <VTag v-for="linkIcon in card.linkIcons" :tag="linkIcon" :key="linkIcon.id" />
+        <VTag
+          :title="linkIcon.title"
+          v-for="linkIcon in card.linkIcons"
+          :tag="linkIcon"
+          :key="linkIcon.id"
+        />
       </div>
       <h3>{{ card.title }}</h3>
-      <p>{{ card.description }}</p>
+      <p>{{ trimText(card.description, 75) }}</p>
     </div>
     <div class="tag-container" v-if="card.tags">
       <VTag v-for="tag in card.tags" :tag="tag" :key="tag.id" />

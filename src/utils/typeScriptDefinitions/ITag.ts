@@ -4,6 +4,7 @@ interface ITag {
   style?: Record<string, string>
   icon?: { class: string; style?: Record<string, string> }
   isActive?: boolean
+  title?: string
 }
 
 interface TagFilterOperation {
