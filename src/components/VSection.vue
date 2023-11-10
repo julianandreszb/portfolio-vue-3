@@ -48,7 +48,7 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
 .v-section {
   display: flex;
   flex-direction: column;
-  padding-block: 2.8rem;
+  padding-block: 4rem 2.8rem;
   padding-inline: 1.6rem;
   background-color: var(--color-background);
   border-top: solid 1px var(--color-border-gray-light);

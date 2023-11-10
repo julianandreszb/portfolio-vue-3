@@ -20,9 +20,16 @@ const toggleMainMenu = function () {
 
 const defaultMenu = props.routes.length ? props.routes[0].id : ''
 const selectedMenu = ref(defaultMenu)
+const setActiveMenu = function (routeId: string) {
+  selectedMenu.value = routeId
+}
 
 function onMenuSelected(routeId: string) {
-  selectedMenu.value = routeId
+  setActiveMenu(routeId)
+
+  if (isHamburgerMenuExpanded.value) {
+    toggleMainMenu()
+  }
 }
 </script>
 
@@ -37,22 +44,18 @@ function onMenuSelected(routeId: string) {
       <li class="hamburger-menu-line"></li>
       <li class="hamburger-menu-line"></li>
     </ul>
-    <ul class="main-menu" :class="{ 'main-menu-expanded': isMainMenuExpanded }">
-      <li
+    <section class="main-menu" :class="{ 'main-menu-expanded': isMainMenuExpanded }">
+      <router-link
         class="main-menu-item"
         v-for="route in props.routes"
         :key="route.id"
-        :data-testid="route.id"
+        :class="{ active: selectedMenu === route.id }"
+        :to="{ name: 'home', hash: route.hash }"
+        @click="onMenuSelected(route.id)"
       >
-        <router-link
-          :class="{ active: selectedMenu === route.id }"
-          :to="{ name: 'home', hash: route.hash }"
-          @click="onMenuSelected(route.id)"
-        >
-          {{ route.label }}
-        </router-link>
-      </li>
-    </ul>
+        {{ route.label }}
+      </router-link>
+    </section>
   </nav>
 </template>
 
@@ -60,13 +63,14 @@ function onMenuSelected(routeId: string) {
 @import '../assets/sass/abstracts/mixin';
 
 .navbar {
+  position: sticky;
+  top: 0;
   background-color: var(--color-background);
   display: flex;
   justify-content: end;
   padding-block: 2.4rem;
   padding-inline: 2.4rem;
   min-height: 6rem;
-  box-shadow: 0 8px 8px -8px rgba(1, 1, 1, 0.5);
 
   .hamburger-menu {
     display: flex;
@@ -107,19 +111,15 @@ function onMenuSelected(routeId: string) {
     padding-inline: 0;
 
     .main-menu-item {
-      list-style: none;
       padding-block: 1.6rem;
       padding-inline: 1.6rem;
+      white-space: nowrap;
+      text-decoration: none;
+      user-select: none;
+      color: var(--color-text-black);
 
-      a {
-        white-space: nowrap;
-        text-decoration: none;
-        user-select: none;
-        color: var(--color-text-black);
-
-        &:visited {
-          color: var(--color-text);
-        }
+      &:visited {
+        color: var(--color-text);
       }
     }
 
@@ -132,7 +132,8 @@ function onMenuSelected(routeId: string) {
       right: 0;
       top: 7rem;
       width: 100%;
-      box-shadow: 0 10px 10px -10px rgba(1, 1, 1, 0.5);
+      border-bottom: 2px solid #dedede;
+      padding-block-end: 1.6rem;
 
       .main-menu-item:hover,
       .main-menu-item:active {
@@ -156,14 +157,12 @@ function onMenuSelected(routeId: string) {
         padding-inline: 0;
         min-width: 7rem;
 
-        a {
-          &:hover {
-            font-weight: bold;
-          }
+        &:hover {
+          font-weight: bold;
+        }
 
-          &.active {
-            font-weight: bold;
-          }
+        &.active {
+          font-weight: bold;
         }
       }
     }
