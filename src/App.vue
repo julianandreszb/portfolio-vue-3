@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import TheNavBar from '@/components/TheNavBar.vue'
-import { routes } from '@/utils/routes'
 import VSection from '@/components/VSection.vue'
 import { EnumHeaders } from '@/utils/typeScriptDefinitions/EnumHeaders'
 import VContentSummary from '@/components/blocks/VContentSummary.vue'
@@ -12,6 +11,7 @@ import VCareer from '@/components/blocks/VCareer.vue'
 import VContact from '@/components/blocks/VContact.vue'
 
 const skillItems = appConfig.sections.skills.items
+const routes = appConfig.routes
 </script>
 
 <template>

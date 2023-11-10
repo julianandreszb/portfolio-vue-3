@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import TheNavBar from '@/components/TheNavBar.vue'
-import { routes } from '../../utils/routes'
+import { routes } from '../../../app.config.json'
 
 describe('TheNavBar', () => {
   it('checks that navigation bar items exist', () => {
