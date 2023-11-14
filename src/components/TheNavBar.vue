@@ -116,10 +116,12 @@ function onMenuSelected(routeId: string) {
       white-space: nowrap;
       text-decoration: none;
       user-select: none;
-      color: var(--color-text-black);
+      //color: var(--color-text-black);
+      color: var(--color-text-primary);
 
       &:visited {
-        color: var(--color-text);
+        //color: var(--color-text);
+        color: var(--color-text-primary);
       }
     }
 

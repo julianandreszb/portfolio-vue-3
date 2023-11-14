@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import appConfig from '../../../app.config.json'
+import appConfig from '../../../app.config'
 const { summary } = appConfig.sections
 </script>
 
@@ -34,7 +34,10 @@ const { summary } = appConfig.sections
     .profile-photo {
       width: 20rem;
       height: 20rem;
-      border-radius: 50%;
+      border-radius: 100%;
+
+      padding: 12px;
+      background: linear-gradient(45deg, #f48ace 0%, #493a97 100%);
     }
   }
 
@@ -51,6 +54,7 @@ const { summary } = appConfig.sections
 
       .name {
         font-weight: 700;
+        color: var(--color-text-primary);
       }
     }
 
@@ -58,6 +62,7 @@ const { summary } = appConfig.sections
       text-align: center;
       font-size: 4rem;
       font-weight: 700;
+      color: var(--color-text-primary);
     }
   }
 }

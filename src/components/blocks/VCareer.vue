@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VExperience from '@/components/VExperience.vue'
-import appConfig from '../../../app.config.json'
+import appConfig from '../../../app.config'
 const { career } = appConfig.sections
 </script>
 

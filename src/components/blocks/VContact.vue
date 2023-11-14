@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IContact } from '@/utils/typeScriptDefinitions/IContact'
-import appConfig from '../../../app.config.json'
+import appConfig from '../../../app.config'
 const { contact }: { contact: IContact } = appConfig.sections
 const currentDate = new Date()
 </script>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VTagFilter from '@/components/VTagFilter.vue'
-import appConfig from '../../../app.config.json'
+import appConfig from '../../../app.config'
 import { computed, reactive } from 'vue'
 import type { ITag, TagFilterOperation } from '@/utils/typeScriptDefinitions/ITag'
 import VCard from '@/components/VCard.vue'

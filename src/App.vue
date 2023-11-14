@@ -4,7 +4,7 @@ import VSection from '@/components/VSection.vue'
 import { EnumHeaders } from '@/utils/typeScriptDefinitions/EnumHeaders'
 import VContentSummary from '@/components/blocks/VContentSummary.vue'
 import VContentAboutMe from '@/components/blocks/VContentAboutMe.vue'
-import appConfig from '../app.config.json'
+import appConfig from '../app.config'
 import VRatingBar from '@/components/blocks/VRatingBar.vue'
 import VPortfolio from '@/components/blocks/VPortfolio.vue'
 import VCareer from '@/components/blocks/VCareer.vue'
@@ -24,6 +24,7 @@ const routes = appConfig.routes
       <v-content-about-me></v-content-about-me>
     </v-section>
     <v-section
+      v-if="false"
       section-id="skills"
       :header-tag="{ tagContent: 'my_skills', tagName: EnumHeaders.h2 }"
     >

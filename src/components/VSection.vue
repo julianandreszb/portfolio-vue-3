@@ -43,6 +43,7 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  color: var(--color-text-primary);
 }
 
 .v-section {
@@ -74,7 +75,8 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
     h5,
     h6 {
       @include heading-tag;
-      color: var(--vt-c-gray);
+      color: var(--color-text-primary);
+      opacity: 0.4;
       text-align: right;
     }
   }
