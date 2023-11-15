@@ -8,7 +8,7 @@ defineProps<{ experience: IExperience }>()
   <article class="experience-wrap">
     <section>
       <div class="heading-summary">
-        <h3 data-testid="job-title">{{ experience.title }}</h3>
+        <h3 data-testid="job-title" class="job-title">{{ experience.title }}</h3>
         <span data-testid="company-name" class="start-point">{{ experience.company }}</span>
         <span data-testid="time-in-company" class="start-point">{{
           `${experience.startDate} - ${experience.endDate}`
@@ -40,6 +40,10 @@ defineProps<{ experience: IExperience }>()
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+
+      .job-title {
+        color: var(--color-text-accent);
+      }
 
       .start-point::before {
         content: '';

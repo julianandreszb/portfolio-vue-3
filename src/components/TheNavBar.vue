@@ -117,11 +117,11 @@ function onMenuSelected(routeId: string) {
       text-decoration: none;
       user-select: none;
       //color: var(--color-text-black);
-      color: var(--color-text-primary);
+      color: var(--color-text);
 
       &:visited {
         //color: var(--color-text);
-        color: var(--color-text-primary);
+        color: var(--color-text);
       }
     }
 

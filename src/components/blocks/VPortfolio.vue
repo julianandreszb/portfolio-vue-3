@@ -51,18 +51,18 @@ let filteredProjects = computed(() => {
   padding-block: 1.6rem;
   padding-inline: 1.6rem;
   border: 2px solid rgba(230, 230, 230, 0.6);
-  background-color: var(--color-background-soft);
+  background-color: var(--vt-c-complement);
 
   :deep(article) {
     h3 {
-      color: var(--color-text);
+      color: var(--color-text-accent);
       font-size: 2.4rem;
       font-weight: 600;
       line-height: 2.4rem;
     }
 
     p {
-      color: var(--color-text-black-60);
+      //color: var(--color-text-black-60);
 
       font-style: normal;
       font-weight: 400;

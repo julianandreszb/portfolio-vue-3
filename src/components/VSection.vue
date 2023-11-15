@@ -43,7 +43,7 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  color: var(--color-text-primary);
+  color: var(--vt-c-complement);
 }
 
 .v-section {
@@ -52,7 +52,7 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   padding-block: 4rem 2.8rem;
   padding-inline: 1.6rem;
   background-color: var(--color-background);
-  border-top: solid 1px var(--color-border-gray-light);
+  //border-top: solid 1px var(--color-border-gray-light);
   gap: 1rem; /* 3rem > phone */
 
   //https://vuejs.org/api/sfc-css-features.html#scoped-css
@@ -75,7 +75,6 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
     h5,
     h6 {
       @include heading-tag;
-      color: var(--color-text-primary);
       opacity: 0.4;
       text-align: right;
     }

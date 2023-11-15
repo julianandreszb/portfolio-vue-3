@@ -23,7 +23,7 @@ function trimText(text: string, maxLength: number): string {
           :key="linkIcon.id"
         />
       </div>
-      <h3>{{ card.title }}</h3>
+      <h3 class="card-title">{{ card.title }}</h3>
       <p>{{ trimText(card.description, 75) }}</p>
     </div>
     <div class="tag-container" v-if="card.tags">
@@ -48,6 +48,10 @@ article {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    .card-title {
+      color: var(--color-text-accent);
+    }
   }
 
   p::first-letter {

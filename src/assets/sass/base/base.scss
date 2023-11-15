@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --vt-c-primary: #189AB4;
+  --vt-c-primary: #142a41;
+  --vt-c-secondary: #f6f6f8;
+  --vt-c-accent: #f75342;
+  --vt-c-complement: #7b88a0;
 
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -21,15 +24,16 @@
 }
 
 :root {
-  --color-background: var(--vt-c-white);
+  --color-background: var(--vt-c-primary);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
   --color-border-dark: var(--vt-c-divider-dark-1);
   --color-border-gray-light: var(--vt-c-divider-dark-2);
 
-  --color-text-primary: var(--vt-c-primary);
-  --color-text: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-secondary);
+  --color-text-accent: var(--vt-c-accent);
+  --color-text-complement: var(--vt-c-complement);
   --color-text-black: var(--vt-c-black);
   --color-text-black-60: var(--vt-c-text-dark-2);
   --color-text-black-40: var(--vt-c-text-dark-3);
@@ -50,7 +54,7 @@ html {
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background-mute);
+  background: var(--vt-c-primary);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family:  'Poppins', sans-serif;

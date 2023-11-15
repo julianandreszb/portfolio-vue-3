@@ -37,7 +37,11 @@ const { summary } = appConfig.sections
       border-radius: 100%;
 
       padding: 12px;
-      background: linear-gradient(45deg, #f48ace 0%, #493a97 100%);
+      background: linear-gradient(
+        45deg,
+        var(--color-text-complement) 0%,
+        var(--color-text-accent) 100%
+      );
     }
   }
 
@@ -54,7 +58,7 @@ const { summary } = appConfig.sections
 
       .name {
         font-weight: 700;
-        color: var(--color-text-primary);
+        color: var(--color-text-accent);
       }
     }
 
@@ -62,7 +66,7 @@ const { summary } = appConfig.sections
       text-align: center;
       font-size: 4rem;
       font-weight: 700;
-      color: var(--color-text-primary);
+      color: var(--color-text-accent);
     }
   }
 }
