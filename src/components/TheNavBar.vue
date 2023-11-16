@@ -71,6 +71,7 @@ function onMenuSelected(routeId: string) {
   padding-block: 2.4rem;
   padding-inline: 2.4rem;
   min-height: 6rem;
+  z-index: 100;
 
   .hamburger-menu {
     display: flex;
@@ -80,10 +81,15 @@ function onMenuSelected(routeId: string) {
     height: 2.2rem;
     padding-inline-start: 0;
     list-style: none;
+    cursor: pointer;
+
+    &:hover > .hamburger-menu-line {
+      background-color: var(--color-text);
+    }
 
     .hamburger-menu-line {
       height: 0.4rem;
-      background-color: #2c3e50;
+      background-color: var(--color-text-complement);
       border-radius: 4px;
     }
 
@@ -116,12 +122,10 @@ function onMenuSelected(routeId: string) {
       white-space: nowrap;
       text-decoration: none;
       user-select: none;
-      //color: var(--color-text-black);
-      color: var(--color-text);
+      color: var(--color-text-complement);
 
       &:visited {
-        //color: var(--color-text);
-        color: var(--color-text);
+        color: var(--color-text-complement);
       }
     }
 
@@ -134,12 +138,14 @@ function onMenuSelected(routeId: string) {
       right: 0;
       top: 7rem;
       width: 100%;
-      border-bottom: 2px solid #dedede;
+      border-bottom: 2px solid var(--color-text-complement);
       padding-block-end: 1.6rem;
 
-      .main-menu-item:hover,
+      .main-menu-item:hover {
+        color: var(--color-text);
+      }
       .main-menu-item:active {
-        background-color: var(--color-background-soft);
+        color: var(--color-text);
       }
     }
   }
@@ -164,7 +170,9 @@ function onMenuSelected(routeId: string) {
         }
 
         &.active {
+          color: var(--color-text);
           font-weight: bold;
+          border-bottom: solid 4px var(--color-text-accent);
         }
       }
     }

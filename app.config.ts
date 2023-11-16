@@ -17,7 +17,7 @@ export default {
         text: 'Full-stack Web Developer'
       },
       photo: {
-        src: '/profile-picture.png'
+        src: 'https://media.licdn.com/dms/image/D4D03AQEnI7r7NcJCAw/profile-displayphoto-shrink_800_800/0/1692085835922?e=1705536000&v=beta&t=mjZoJm8JlkIxIBuLdC2ARlaEpGjEvt5ivi74WnRwUqY'
       },
       description: {
         text: "I'm a full-stack web developer making great stuff happen since 2013. Currently building awesome code and apps at Life-File"

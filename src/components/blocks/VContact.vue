@@ -34,7 +34,7 @@ footer {
   a {
     text-decoration: none;
     user-select: none;
-    color: var(--color-text-black-60);
+    color: var(--color-text);
   }
 
   span {
@@ -48,7 +48,7 @@ footer {
 
   h4 {
     padding-block: 4rem;
-    color: var(--color-text-black-40);
+    color: var(--color-text);
   }
 
   address {

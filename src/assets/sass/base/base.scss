@@ -1,42 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --vt-c-primary: #142a41;
-  --vt-c-secondary: #f6f6f8;
-  --vt-c-accent: #f75342;
-  --vt-c-complement: #7b88a0;
-
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-  --vt-c-gray: rgba(175, 175, 175, 0.46);
-
-  --vt-c-black: #181818;
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(235, 235, 235, 0.82);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(0, 0, 0, 0.6);
-  --vt-c-text-dark-3: rgba(0, 0, 0, 0.4);
+  --vt-c-primary: rgb(20, 42, 65);
+  --vt-c-secondary: rgb(246, 246, 248);
+  --vt-c-accent: rgb(247, 83, 66);
+  --vt-c-complement: rgb(123, 136, 160);
 }
 
 :root {
   --color-background: var(--vt-c-primary);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border-dark: var(--vt-c-divider-dark-1);
-  --color-border-gray-light: var(--vt-c-divider-dark-2);
+  --color-background-complement-alpha50: rgba(var(--vt-c-complement), 0.5);
+  --color-border-dark: var(--vt-c-accent);
 
   --color-text: var(--vt-c-secondary);
   --color-text-accent: var(--vt-c-accent);
   --color-text-complement: var(--vt-c-complement);
-  --color-text-black: var(--vt-c-black);
-  --color-text-black-60: var(--vt-c-text-dark-2);
-  --color-text-black-40: var(--vt-c-text-dark-3);
 }
 
 *,

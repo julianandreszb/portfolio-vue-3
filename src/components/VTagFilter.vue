@@ -30,7 +30,7 @@ function handleTagClick(tag: ITag) {
   flex-wrap: wrap;
   padding-block: 1.6rem;
   padding-inline: 1.6rem;
-  border: 2px solid var(--color-border-gray-light);
+  border: 2px solid var(--color-text-complement);
   border-radius: 16px;
 
   span {
@@ -38,20 +38,30 @@ function handleTagClick(tag: ITag) {
     padding-block: 0.6rem;
     padding-inline: 0.8rem;
     border-radius: 16px;
-    background-color: #e6e6e6;
+    background-color: color-mix(in srgb, var(--vt-c-complement) 40%, transparent);
 
-    color: var(--color-text-black-60);
+    color: var(--color-text);
     font-size: 1.6rem;
     font-weight: 400;
 
     &:hover {
       cursor: pointer;
       background-color: #bbbbbb;
+      opacity: 0.8;
     }
 
     &.active {
       background-color: #000000;
       color: #ffffff;
+    }
+
+    :deep(a) {
+      color: white;
+
+      &:link,
+      &:visited {
+        color: white;
+      }
     }
   }
 

@@ -50,8 +50,8 @@ let filteredProjects = computed(() => {
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   padding-block: 1.6rem;
   padding-inline: 1.6rem;
-  border: 2px solid rgba(230, 230, 230, 0.6);
-  background-color: var(--vt-c-complement);
+  background: color-mix(in srgb, var(--vt-c-complement) 40%, transparent);
+  border-radius: 16px;
 
   :deep(article) {
     h3 {
@@ -77,7 +77,7 @@ let filteredProjects = computed(() => {
         border-radius: 16px;
         background-color: #e6e6e6;
 
-        color: var(--color-text-black-60);
+        color: var(--color-text);
         font-size: 1.6rem;
         font-weight: 400;
       }

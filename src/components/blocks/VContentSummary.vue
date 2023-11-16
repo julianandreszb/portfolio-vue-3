@@ -6,7 +6,7 @@ const { summary } = appConfig.sections
 <template>
   <div class="summary">
     <div class="profile-photo-container">
-      <img class="profile-photo" src="/profile-picture.png" alt="A developer profile picture" />
+      <img class="profile-photo" :src="summary.photo.src" alt="A developer profile picture" />
     </div>
     <div class="description-container">
       <h1 class="greeting">
@@ -37,11 +37,7 @@ const { summary } = appConfig.sections
       border-radius: 100%;
 
       padding: 12px;
-      background: linear-gradient(
-        45deg,
-        var(--color-text-complement) 0%,
-        var(--color-text-accent) 100%
-      );
+      background: linear-gradient(45deg, #000000 0%, var(--color-text-accent) 100%);
     }
   }
 
