@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import TheNavBar from '@/components/TheNavBar.vue'
-import { routes } from '../../../app.config'
+import appConfig from '../../../app.config'
+const { routes } = appConfig
 
 describe('TheNavBar', () => {
   it('checks that navigation bar items exist', () => {

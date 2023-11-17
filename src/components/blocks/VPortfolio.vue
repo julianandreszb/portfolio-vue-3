@@ -36,8 +36,14 @@ let filteredProjects = computed(() => {
 
 <template>
   <VTagFilter :tags="filteredTags" @emitTagSelected="handleTagSelected" />
+
   <section class="project-container">
-    <VCard v-for="project in filteredProjects" :card="project" :key="project.id"></VCard>
+    <template v-if="filteredProjects.length">
+      <VCard v-for="project in filteredProjects" :card="project" :key="project.id"></VCard>
+    </template>
+    <template v-else>
+      <p>No projects were found.</p>
+    </template>
   </section>
 </template>
 
@@ -62,11 +68,9 @@ let filteredProjects = computed(() => {
     }
 
     p {
-      //color: var(--color-text-black-60);
-
       font-style: normal;
       font-weight: 400;
-      //line-height: 1.6rem;
+      opacity: 0.7;
     }
     .tag-container,
     .link-icon-container {
@@ -75,11 +79,19 @@ let filteredProjects = computed(() => {
         padding-block: 0.1rem;
         padding-inline: 0.8rem;
         border-radius: 16px;
-        background-color: #e6e6e6;
-
+        background-color: color-mix(in srgb, var(--vt-c-complement) 40%, transparent);
         color: var(--color-text);
         font-size: 1.6rem;
         font-weight: 400;
+
+        &:hover {
+          color: var(--color-text-accent);
+        }
+
+        a {
+          color: var(--color-text);
+          cursor: default;
+        }
       }
     }
 

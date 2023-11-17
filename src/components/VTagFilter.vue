@@ -44,15 +44,10 @@ function handleTagClick(tag: ITag) {
     font-size: 1.6rem;
     font-weight: 400;
 
-    &:hover {
-      cursor: pointer;
-      background-color: #bbbbbb;
-      opacity: 0.8;
-    }
-
+    &:hover,
     &.active {
-      background-color: #000000;
-      color: #ffffff;
+      cursor: pointer;
+      background-color: var(--vt-c-accent);
     }
 
     :deep(a) {
@@ -62,12 +57,6 @@ function handleTagClick(tag: ITag) {
       &:visited {
         color: white;
       }
-    }
-  }
-
-  @include for-size(tablet-landscape-up) {
-    span {
-      font-size: 2.4rem;
     }
   }
 }

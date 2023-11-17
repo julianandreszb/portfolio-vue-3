@@ -27,7 +27,9 @@ function trimText(text: string, maxLength: number): string {
       <p>{{ trimText(card.description, 75) }}</p>
     </div>
     <div class="tag-container" v-if="card.tags">
-      <VTag v-for="tag in card.tags" :tag="tag" :key="tag.id" />
+      <a v-for="(tag, index) in card.tags" :key="tag.id">{{
+        index ? ` · ${tag.label}` : tag.label
+      }}</a>
     </div>
   </article>
 </template>
@@ -58,14 +60,16 @@ article {
     text-transform: capitalize;
   }
 
-  .tag-container,
+  .tag-container {
+    a {
+      color: var(--color-text-accent);
+    }
+  }
+
   .link-icon-container {
     display: flex;
     flex-direction: row;
     gap: 0.8rem;
-  }
-
-  .link-icon-container {
     justify-content: right;
   }
 }
