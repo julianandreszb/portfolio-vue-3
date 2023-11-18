@@ -34,11 +34,18 @@ footer {
   a {
     text-decoration: none;
     user-select: none;
-    color: var(--color-text);
+    color: var(--color-text-complement);
+
+    &:hover {
+      color: var(--color-text);
+    }
   }
 
   span {
     font-size: 1.8rem;
+    &:hover {
+      color: var(--color-text-accent);
+    }
   }
 
   h3 {
@@ -48,7 +55,7 @@ footer {
 
   h4 {
     padding-block: 4rem;
-    color: var(--color-text);
+    color: var(--color-text-complement);
   }
 
   address {
