@@ -5,8 +5,8 @@ defineProps<{ experience: IExperience }>()
 </script>
 
 <template>
-  <article class="experience-wrap">
-    <section>
+  <div class="experience-wrap">
+    <div class="experience-section">
       <div class="heading-summary">
         <h3 data-testid="job-title" class="job-title">{{ experience.title }}</h3>
         <span data-testid="company-name" class="start-point">{{ experience.company }}</span>
@@ -21,8 +21,8 @@ defineProps<{ experience: IExperience }>()
           <li v-for="(tag, index) in experience.tags" :key="tag">{{ index ? `· ${tag}` : tag }}</li>
         </ul>
       </div>
-    </section>
-  </article>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -31,7 +31,7 @@ defineProps<{ experience: IExperience }>()
   padding-block: 2rem;
   border-bottom: 1px dashed var(--color-border-dark);
 
-  section {
+  .experience-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;

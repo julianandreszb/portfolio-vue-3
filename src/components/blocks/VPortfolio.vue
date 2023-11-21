@@ -37,14 +37,14 @@ let filteredProjects = computed(() => {
 <template>
   <VTagFilter :tags="filteredTags" @emitTagSelected="handleTagSelected" />
 
-  <section class="project-container">
+  <div class="project-container">
     <template v-if="filteredProjects.length">
       <VCard v-for="project in filteredProjects" :card="project" :key="project.id"></VCard>
     </template>
     <template v-else>
       <p>No projects were found.</p>
     </template>
-  </section>
+  </div>
 </template>
 
 <style scoped lang="scss">

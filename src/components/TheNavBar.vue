@@ -44,7 +44,7 @@ function onMenuSelected(routeId: string) {
       <li class="hamburger-menu-line"></li>
       <li class="hamburger-menu-line"></li>
     </ul>
-    <section class="main-menu" :class="{ 'main-menu-expanded': isMainMenuExpanded }">
+    <div class="main-menu" :class="{ 'main-menu-expanded': isMainMenuExpanded }">
       <router-link
         class="main-menu-item"
         v-for="route in props.routes"
@@ -55,7 +55,7 @@ function onMenuSelected(routeId: string) {
       >
         {{ route.label }}
       </router-link>
-    </section>
+    </div>
   </nav>
 </template>
 

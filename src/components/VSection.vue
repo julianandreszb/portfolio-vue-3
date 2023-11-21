@@ -15,14 +15,14 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   let headerTag = ''
   if (tagContent) {
     const tagText = isClosingTag ? `&lt;/${tagContent}&gt;` : `&lt;${tagContent}&gt;`
-    headerTag = `<${tagName} >${tagText}</${tagName}>`
+    headerTag = `${tagText}`
   }
   return headerTag
 }
 </script>
 
 <template>
-  <section :id="props.sectionId" class="v-section">
+  <div :id="props.sectionId" class="v-section">
     <span
       class="opening-tag"
       v-if="props.headerTag?.tagName && props.headerTag?.tagContent"
@@ -34,7 +34,7 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
       v-if="props.headerTag?.tagName && props.headerTag?.tagContent"
       v-html="getHeaderTag(props.headerTag.tagName, props.headerTag.tagContent, true)"
     ></span>
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -52,28 +52,13 @@ function getHeaderTag(tagName: string, tagContent: string, isClosingTag = false)
   padding-block: 4rem 2.8rem;
   padding-inline: 1.6rem;
   background-color: var(--color-background);
-  //border-top: solid 1px var(--color-border-gray-light);
-  gap: 1rem; /* 3rem > phone */
+  gap: 1rem;
 
-  //https://vuejs.org/api/sfc-css-features.html#scoped-css
-
-  :deep(.opening-tag) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+  :deep(span) {
+    &.opening-tag {
       @include heading-tag;
     }
-  }
-  :deep(.closing-tag) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    &.closing-tag {
       @include heading-tag;
       opacity: 0.4;
       text-align: right;
