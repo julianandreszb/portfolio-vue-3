@@ -4,8 +4,7 @@ import VTag from '@/components/VTag.vue'
 
 const props = defineProps<{ tags: Array<ITag> }>()
 
-const emit = defineEmits<{ (e: 'emitTagSelected', tag: TagFilterOperation): void }>() // OPTION #1
-//const emit = defineEmits<{ emitTagSelected: [tag: { id: string; action: string }] }>() // OPTION #2
+const emit = defineEmits<{ (e: 'emitTagSelected', tag: TagFilterOperation): void }>()
 function handleTagClick(tag: ITag) {
   if (tag.isActive) {
     emit('emitTagSelected', { id: tag.id, action: 'setInactive' })
